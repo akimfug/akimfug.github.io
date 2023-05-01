@@ -24,13 +24,15 @@ nav {
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 20px;
   text-decoration: none;
   color: #FFFFFF;
 }
 .menu_item {
   border-right: 2px dotted black;
   padding-right: 40px;
+  display: flex;
+  justify-content: center;
 }
 .menu_item:last-child {
   border-right: none;
@@ -711,6 +713,10 @@ footer .menu .downloads a img {
   }
 }
 @media (max-width: 576px) {
+  nav .menu_link {
+    display: block;
+    text-align: center;
+  }
   .subheader_button {
     display: flex;
     flex-direction: column;
@@ -758,11 +764,11 @@ footer .menu .downloads a img {
   footer .menu .little_menu {
     max-width: 300px;
   }
-  footer .downloads {
-    width: 240px;
-  }
   footer .menu .big_menu {
     width: 290px;
+  }
+  footer .downloads {
+    width: 240px;
   }
   .uberX_black {
     height: 400px;
@@ -778,11 +784,12 @@ footer .menu .downloads a img {
     display: block;
     color: #fff;
   }
-  .uberX_white .uberX_white_text {
+  .uberX_white_text {
+    display: none;
     display: none;
   }
-  .uberX_white {
-    display: none;
+  .world {
+    min-height: 360px;
   }
   .world .title {
     margin-top: 20px;
@@ -793,10 +800,14 @@ footer .menu .downloads a img {
     width: 300px;
   }
   .world .subtitle {
-    font-size: 16px;
+    font-size: 15px;
+    margin-top: 16px;
   }
   .world .label {
     height: 30px;
+  }
+  .world .title {
+    font-size: 20px;
   }
   .little_menu {
     flex-wrap: wrap;
@@ -823,16 +834,6 @@ footer .menu .downloads a img {
   }
   .require {
     padding-top: 20px;
-  }
-  .world {
-    min-height: 360px;
-  }
-  .world .title {
-    font-size: 20px;
-  }
-  .world .subtitle {
-    font-size: 15px;
-    margin-top: 16px;
   }
   .promo {
     min-height: 400px;
