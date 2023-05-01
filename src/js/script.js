@@ -5,15 +5,17 @@ window.addEventListener('DOMContentLoaded', () => {
     menuItem = document.querySelectorAll('.menu_item'),
     burger = document.querySelector('.burger');
 
-    burger.addEventListener('click', () => {
+    function toggleMenu() {
         burger.classList.toggle('burger_active');
         menu.classList.toggle('menu_active');
-    });
+    }
 
+    burger.addEventListener('click', () => {
+        toggleMenu()
+    });
     menuItem.forEach(item => {
         item.addEventListener('click', () => {
-            burger.classList.toggle('burger_active');
-            menu.classList.toggle('menu_active');
+            toggleMenu()
         })
-    })
-})
+    });
+});
